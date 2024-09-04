@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// CutiPribadi struct untuk menyimpan informasi cuti
 type CutiPribadi struct {
 	JumlahCutiBersama int
 	TanggalJoin       time.Time
@@ -13,7 +12,6 @@ type CutiPribadi struct {
 	DurasiCuti        int
 }
 
-// BolehCutiPribadi function untuk menentukan apakah karyawan boleh cuti
 func BolehCutiPribadi(cuti CutiPribadi) (bool, string) {
 	sisaHariTahunPertama := 365 - int(cuti.TanggalJoin.YearDay()) + 180
 
